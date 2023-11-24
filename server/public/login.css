@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+.form-popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    width: 100%;
+    max-width: 720px;
+    pointer-events: none;
+    background: #fff;
+    border: 2px solid #fff;
+    transform: translate(-50%,-50%); 
+}
+
+.form-popup .close-btn{
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    color: #717171;
+    cursor: pointer;
+}
+.form-popup .form-box{
+    display: flex;
+}
+.form-box .form-details{
+    width: 390px;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url("images/snow.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+.form-box h2{
+    text-align: center;
+    margin-bottom: 30px;
+    
+}
+
+.form-box .form-content{
+    width: 100%;
+    padding: 40px;
+    background-color: #fff;
+}
+.form-content h3{
+    text-align: center;
+    font-weight: bold;
+}
+form .input-field{
+    height: 35px;
+    width: 100%;
+    margin-top: 20px;
+}
+form .input-field input{
+    width: 100%;
+    height: 100%;
+    font-size: 0.95rem;
+    border: 1px solid #717171;
+    border-radius: 4px;
+    padding: 0 15px;
+    outline: none;
+
+}
+.input-field input:focus{
+    border-color: darkblue;
+}
+.input-field input:is(:focus, :valid){
+    padding: 16px 15px 0;
+}
+.form-box a{
+    position: relative;
+    color: #000;
+    text-decoration: none;
+    display: inline-block;
+}
+.form-box a:hover{
+    color: darkblue;
+    text-decoration: underline;
+}
+.form-box .forgot-pass{
+    margin-top: 15px;
+    font-size: 0.95;
+}
+form button{
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 14px 0;
+    border-radius: 3px;
+    margin: 25px 0;
+    color: #fff;
+    cursor: pointer;
+    background-color: aquamarine;
+    transition: 0.2s ease;
+}
+form button:hover{
+    background: #717171;
+}
+.form-box .button-link{
+    text-align: center;
+}
