@@ -22,13 +22,12 @@ app.get("/", (req, res) => {
 });
 
 // Handle the /weather route
-app.get("/weather", async(req, res) => {
+app.get("/weather", (req, res) => {
   // Get the city from the query parameters
   const city = req.query.city;
-  const apikey="094b545dde613af5667ba10639a224f8";
-
+const apikey="193ab6f4762de43d221a6c2ab3e315eb";
   // Add your logic here to fetch weather data from the API
-  const url="https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apikey}";
+  const url="https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid={apikey}";
   // Render the index template with the weather data and error message
   res.render("index", { weather: null, error: null });
 });
