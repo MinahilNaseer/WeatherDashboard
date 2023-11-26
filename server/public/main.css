@@ -8,8 +8,13 @@
 
 }
 body{
-    background: #dfe9f5;
-    
+    /*background: #dfe9f5;*/
+    background-image: url("https://static2.tripoto.com/media/filter/nl/img/1566892/TripDocument/1588411147_img_7560.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    justify-content: center;
+    align-items: center;
 }
 .container{
     position: relative;
@@ -188,7 +193,6 @@ nav:hover{
     align-items: center;
     padding-left: 10px;
     gap: 10px;
-    overflow: hidden;
 }
 .container .right .top .searchBox .inputBox i{
     color:darkblue;
@@ -202,6 +206,10 @@ nav:hover{
     border: none;
     background: transparent;
     margin-right: 10px;
+}
+.inputBox button{
+    background-color:transparent;
+    border: none;
 }
 .container .right main{
     position: relative;
