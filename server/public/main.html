@@ -1,3 +1,4 @@
+<!-- views/index.ejs -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,15 +67,18 @@
         </header>
         <div class="right">
             <div class="top">
+                <h1>Dashboard</h1>
+                <form action="/forecast" method="get">
                 <div class="searchBox">
-                    <h1>Dashboard</h1>
-                    <div class="inputBox">
-                        <input type="text" placeholder="Search..">
-                        <button type="submit" id="searchIcon"><i class="fas fa-search" ></i></button>
+                       <div class="inputBox">
+                           <input type="text" name="city" placeholder="Search..">
+                       </div>
+               <button type="submit" id="searchIcon"><i class="fas fa-search" ></i></button>
                         <!--<i class="fas fa-close"></i>-->
-                    </div>
                 </div>
-            </div>
+               </form>
+           </div>
+  
             <main>
                 <div class="projectCard">
                     <div class="container">
