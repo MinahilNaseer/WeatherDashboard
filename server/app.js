@@ -74,10 +74,12 @@ app.post('/',(req,res)=>{
       const temp = weatherData.main.temp;
       const name = weatherData.name;
       const desc =weatherData.weather[0].description;
+      const windspeed= weatherData.wind.speed;
       res.json({
         temp,
         desc,
-        name
+        name,
+        windspeed
       });
     });
     //console.log(response);
