@@ -9,12 +9,13 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <script src="main.js" defer></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <title>Weather app</title>
 </head>
 
 <body>
-    
+
     <div class="container">
         <div class="left">
             <nav>
@@ -70,15 +71,15 @@
             <div class="top">
                 <h1>Dashboard</h1>
                 <form action="/" method="post" id="weatherForm">
-                <div class="searchBox">
-                    <div class="inputBox">
-                        <input type="text" name= "cityName" id="CityInput" placeholder="Search..">
-                        <button type="submit" id="searchIcon"><i class="fas fa-search" ></i></button>
-                    </div>
-                
+                    <div class="searchBox">
+                        <div class="inputBox">
+                            <input type="text" name="cityName" id="CityInput" placeholder="Search..">
+                            <button type="submit" id="searchIcon"><i class="fas fa-search"></i></button>
+                        </div>
+
                         <!--<i class="fas fa-close"></i>-->
-                </div>
-               </form>
+                    </div>
+                </form>
             </div>
             <main>
                 <div class="projectCard">
@@ -87,12 +88,18 @@
                             <img src="images/sunny.jpg" class="weather-background">
                             <div class="weather-gradient">
                                 <div class="date-container">
-                                    <h2 ><div class="day"></div></h2>
-                                    <h5 ><p id="date"></p></h5>
-                                    <span class="material-symbols-outlined">
-                                        location_on
-                                    </span>
-                                    <span class="location" id="name">Sudney, AUS</span>
+                                    <h2>
+                                        <div class="day"></div>
+                                    </h2>
+                                    <h5>
+                                        <p class="date" id="date"></p>
+                                    </h5>
+                                    <div class="location-adjust">
+                                        <span class="material-symbols-outlined">
+                                            location_on
+                                        </span>
+                                        <span class="location" id="name">Sudney, AUS</span>
+                                    </div>
                                 </div>
                                 <div class="weather-container">
                                     <span class="material-symbols-outlined">
