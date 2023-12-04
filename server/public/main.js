@@ -1,7 +1,7 @@
 var today=new Date();
 // for day
 var day=today.getDay();
-var daylist=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+var daylist=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 document.querySelector(".day").innerHTML=daylist[day]
 console.log(daylist[day]);
 // for date
