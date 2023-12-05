@@ -119,34 +119,7 @@ nav:hover{
     width: 100%;
     padding-left: 0;
 }
-/*.top .searchbar{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #87CEEB;
-    padding: 15px;
-    border-bottom: 3px solid #fff;
-    width: 100%;
-}
-.top .searchbar .search{
-    width: 80%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 10px;
-    border-radius: 15px;
-    border: 1px solid #d7dbe6;
-}
-.top .searchbar .search i{
-    margin-right: 10px;
-}
-.top .searchbar .search input{
-    flex: 1;
-    border: none;
-    outline: none;
-    font-size: 14px;
-    border-radius: 10px;
-}*/
+
 .container .right{
     position: relative;
     width: 100%;
@@ -176,11 +149,7 @@ nav:hover{
     width: 100%;
     float: left;
 }
-/*.container .right .top .searchBox h1{
-    color: #000;
-    font-size: 1.4em;
-    cursor: pointer;
-}*/
+
 .container .right .top .searchBox .inputBox{
     position: relative;
     width: 100%;
@@ -209,6 +178,19 @@ nav:hover{
 .inputBox button{
     background-color:transparent;
     border: none;
+}
+.top .login{
+    margin-left: auto;
+    margin-right: 20px;
+}
+.login .login-btn{
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 3px;
+    cursor: pointer;
 }
 .container .right main{
     position: relative;

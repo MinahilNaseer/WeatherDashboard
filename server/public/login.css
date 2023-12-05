@@ -1,0 +1,69 @@
+.form-popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    max-width: 720px;
+    width: 100%;
+    background: #fff;
+    border: 2px solid #000;
+    transform: translate(-50%,-50%);
+}
+.form-popup .form-box{
+    display: flex;
+}
+.form-box .form-details{
+    max-width: 330px;
+}
+.form-box h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.form-box .form-contents{
+    width: 100%;
+    padding: 35px;
+}
+form .input-field{
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+form .input-field input{
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    border:1px solid #000;
+    outline: none;
+    border-width: 2px;
+    border-radius: 3px;
+    padding: 0 15px;
+}
+.input-field input:focus{
+    border-color: darkblue;
+}
+.form-box a{
+    color: darkblue;
+    text-decoration: none;
+}
+.form-box a:hover{
+    text-decoration: underline;
+}
+
+.form-box .forgot-pass{
+    display: inline-flex;
+    margin-top: 14px;
+    font-size: 0.95rem;
+}
+form button{
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 14px 0;
+    border-radius: 3px;
+    margin: 25px 0;
+    color: #fff;
+    background: #00bcd4;
+    cursor: pointer;
+}

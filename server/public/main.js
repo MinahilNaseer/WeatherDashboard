@@ -26,4 +26,7 @@ $(document).ready(function(){
         });
     });
 });
+function redirectToLoginPage() {
+    window.location.href = "login.html";
+}
     
