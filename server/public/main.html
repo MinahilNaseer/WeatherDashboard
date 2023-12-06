@@ -79,7 +79,7 @@
                     </div>
                 </form>
                 <div class="login">
-                    <button onclick="redirectToLoginPage()" class="login-btn">LOGIN</button>
+                    <button class="login-btn">LOGIN</button>
                 </div>
             </div>
             <main>
@@ -169,6 +169,56 @@
 
         </div>
 
+    </div>
+    <div class="blur-bg-overlay"></div>
+    <div class="form-popup">
+        <span class="close-btn material-symbols-outlined">close</span>
+        <div class="form-box login">
+            <div class="form-details">
+                <h2>Welcome Back</h2>
+                <p>Please login to your account</p>
+            </div>
+            <div class="form-content">
+                <h3>LOGIN</h3>
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" placeholder="Email" required>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" placeholder="Password" required>
+                    </div>
+                    <a href="#" class="forgot-pass">Forgot Password?</a>
+                    <button type="submit">Log In</button>
+                </form>
+                <div class="bottom-link">
+                    Don't have an account?
+                    <a href="#" id="signup-link">Signup</a>
+                </div>
+            </div>
+        </div>
+        <div class="form-box signup">
+            <div class="form-details">
+                <h2>Create Account</h2>
+                <p>To keep yourself updated, please signup using your personal information</p>
+            </div>
+            <div class="form-content">
+                <h3>SIGNUP</h3>
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" placeholder="Email" required>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" placeholder="Password" required>
+                    </div>
+                    
+                    <button type="submit">Sign Up</button>
+                </form>
+                <div class="bottom-link">
+                    Already have an account?
+                    <a href="#" id="login-link">Login</a>
+                </div>
+            </div>
+        </div>
     </div>
 
 </body>
