@@ -42,4 +42,8 @@ loginSignupLink.forEach(link => {
         e.preventDefault();
         formPopup.classList[link.id === "signup-link" ? 'add' : 'remove']("show-signup")
     })
-})
+});
+
+function redirectToMapPage(){
+    window.location.href = "map.html";
+}

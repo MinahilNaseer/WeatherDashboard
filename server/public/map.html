@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="main.css" rel="stylesheet">
+    <script src="map.js" defer></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <nav>
+                <div class="navbar">
+                    <div class="logo">
+                        <img src="images\logo.png" alt="">
+                        <span class="nav-item">Forecast</span>
+                    </div>
+                    <ul>
+                        </li>
+                        <li>
+                            <a href="main.html">
+                                <i class="fas fa-border-all"></i>
+                                <span class="nav-item">Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="map.html">
+                                <i class="fas fa-map"></i>
+                                <span class="nav-item">Map</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-heart"></i>
+                                <span class="nav-item">Saved Location</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-regular fa-calendar-days"></i>
+                                <span class="nav-item">Calender</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-gear"></i>
+                                <span class="nav-item">Setting</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="logout">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span class="nav-item">Log out</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="right">
+            <div class="top">
+                <h1>Map</h1>
+                <form action="/" method="post" id="weatherForm">
+                    <div class="searchBox">
+                        <div class="inputBox">
+                            <input type="text" name="cityName" id="CityInput" placeholder="Search..">
+                            <button type="submit" id="searchIcon"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <main>
+                <div class="projectCard">
+                    
+                </div>
+
+            </main>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
