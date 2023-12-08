@@ -26,10 +26,12 @@ app.post('/',(req,res)=>{
       let data = '';
       response.on('data', (chunk) => {
           data += chunk;
-          const weatherData = JSON.parse(data);
-      console.log(weatherData);
+          //const weatherData = JSON.parse(data);
+      //console.log(weatherData);
       const temp = weatherData.main.temp;
       console.log(temp);
+      const icon = weather.weather[0].icon;
+      console.log(icon);
       });
       response.on('end', () => {
           try {
@@ -38,10 +40,14 @@ app.post('/',(req,res)=>{
                 const temp = weatherData.main.temp;
               const name = weatherData.name;
               const desc = weatherData.weather[0].description;
+              const press = weatherData.main.pressure;
+              const icon = weatherData.weather[0].icon;
               res.json({
                   temp,
                   desc,
-                  name
+                  name,
+                  press,
+                  icon
               });
               }else {
                 // If the required properties are not present, handle the error

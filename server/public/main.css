@@ -313,6 +313,11 @@ nav:hover{
     bottom: 25px;
     left: 25px;
 }
+.weather-container img{
+    
+    height: 50px;
+    width: 50px;
+}
 .weather-container span{
     height: 80px;
     width: 100px;

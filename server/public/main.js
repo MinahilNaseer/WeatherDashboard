@@ -18,7 +18,12 @@ $(document).ready(function(){
             $('#weather-temp').text(data.temp+'°C');
             $('#weather-desc').text(data.desc);
             $('#name').text(data.name);
-            
+            $('#pressure').text(data.press + ' hPa');
+            //const iconUrl = `https://openweathermap.org/img/w/${data.icon}.png`;
+            //$('#weather-icon').text(data.icon);
+            const iconUrl = `https://openweathermap.org/img/w/01d.png`;
+            $('#weather-icon').attr('src', iconUrl);
+            $('#weather-icon').attr('alt', data.desc);
         });
     }
     function getWeatherByLocation() {
