@@ -23,11 +23,12 @@ $(document).ready(function(){
 
         $.post('/',{cityName},function(data){
             console.log(data);
-            $('#weather-temp').text(data.temp+'C');
-            $('#weather-desc').text(data.desc);
+           $('#weather-temp').text(data.temp+'C');
+           $('#weather-desc').text(data.desc);
             $('#name').text(data.name);
-            $('#windspeed').text(data.windspeed+'Km/h');
-            
+            $('#windspeed').text(data.windspeed+'Km/h');  
+            $('#humidity').text(data.humidity+'%');
+            document.getElementById('temp_min').textContent=data.temp_min;
         });
     });
 });
