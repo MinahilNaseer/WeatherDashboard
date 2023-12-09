@@ -305,7 +305,7 @@ nav:hover{
 .weather-container span{
     height: 80px;
     width: 100px;
-    color: rgb(238,215,5);
+    color: rgb(230, 250, 115);
     font-size: 70px;
 }
 .weather-container .weather-temp{

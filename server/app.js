@@ -71,21 +71,25 @@ app.post('/',(req,res)=>{
     })
     response.on('end',()=>{
       const weatherData = JSON.parse(data);
+      console.log('Wind Direction:', weatherData.main.temp);
       console.log(weatherData);
-      const temp = weatherData.main.temp;
+
+      const temp = Math.round(weatherData.main.temp);
       const name = weatherData.name;
-      const desc =weatherData.weather[0].description;
-      const pressure=weatherData.main.pressure;
+      const desc =weatherData.weather[0].description;      const pressure=weatherData.main.pressure;
       const humidity=weatherData.main.humidity;
       const windspeed= weatherData.wind.speed;
+      const sunrise = weatherData.sys && weatherData.sys.sunrise !== undefined ? formatTime(weatherData.sys.sunrise) : 'N/A';
        res.json({
         temp,
         desc,
         name,
+        visibility,
         pressure,
         humidity,
         windspeed,
-      });
+        sunrise,
+        });
    
     });
 
