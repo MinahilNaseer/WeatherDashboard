@@ -28,7 +28,7 @@ $(document).ready(function(){
             $('#name').text(data.name);
             $('#windspeed').text(data.windspeed+'Km/h');  
             $('#humidity').text(data.humidity+'%');
-            document.getElementById('temp_min').textContent=data.temp_min;
+            $('#pressure').text(data.pressure+'bpa');
         });
     });
 });

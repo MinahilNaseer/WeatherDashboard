@@ -75,16 +75,16 @@ app.post('/',(req,res)=>{
       const temp = weatherData.main.temp;
       const name = weatherData.name;
       const desc =weatherData.weather[0].description;
-      const temp_min=weatherData.main.temp_min;
+      const pressure=weatherData.main.pressure;
       const humidity=weatherData.main.humidity;
       const windspeed= weatherData.wind.speed;
        res.json({
         temp,
         desc,
         name,
-        temp_min,
+        pressure,
         humidity,
-        windspeed
+        windspeed,
       });
    
     });
