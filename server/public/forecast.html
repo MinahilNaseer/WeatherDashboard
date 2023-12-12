@@ -42,7 +42,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="forecast.html">
+                            <a href="forecast.html" class="active">
                                 <i class="fas fa-regular fa-calendar-days"></i>
                                 <span class="nav-item">Forecast</span>
                             </a>
@@ -66,31 +66,71 @@
         <div class="right">
             <div class="top">
                 <h1>Forecast</h1>
-
             </div>
             <main>
-                <section class="section forecast">
-                    <div class="projectCard">
-                        <h2 class="title-2" id="forecast-label">5 Days Forecast</h2>
-                        <div class="forecast-container">
-                            <div class="card card-lg forecast-card">
-                                <ul>
-                                    <li class="card-item">
-                                        <div class="icon-wrapper">
-                                            <img src="https://openweathermap.org/img/wn/10d.png" width="36" height="36"
-                                                alt="Overcast CLouds" class="weather-icon">
-                                            <span class="span">
-                                                <p>25&deg;</p>
-                                            </span>
-                                        </div>
-                                        <p class="label-1">10 Dec</p>
-                                        <p class="label-1">Sunday</p>
-                                    </li>
-                                </ul>
+                <div class="projectCard">
+                    <h2 class="title-2" id="forecast-label">7 Day Forecast</h2>
+                    <div class="forecast">
+                        <div class="today">
+                            <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" class="w-icon">
+                            <div class="other">
+                                <div class="day">Monday</div>
+                                <span class="material-symbols-outlined">
+                                    thermostat
+                                </span>
+                                <div class="temp">25.7&#176;  
+                                </div>
+                                <div class="descrip">rain</div>
                             </div>
                         </div>
                     </div>
-                </section>
+                    <div class="future-forecast">
+                        <div class="weather-forecast" id="weather-forecast">
+                            <div class="weather-forecast-item">
+                                <div class="day">Tuesday</div>
+                                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon"
+                                    class="w-icon">
+                                <div class="temp">25.7&#176;</div>
+                                <div class="descrip">rain</div>
+                            </div>
+                            <div class="weather-forecast-item">
+                                <div class="day">Wednesday</div>
+                                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon"
+                                    class="w-icon">
+                                <div class="temp">25.7&#176;</div>
+                                <div class="descrip">rain</div>
+                            </div>
+                            <div class="weather-forecast-item">
+                                <div class="day">Thursday</div>
+                                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon"
+                                    class="w-icon">
+                                <div class="temp">25.7&#176;</div>
+                                <div class="descrip">rain</div>
+                            </div>
+                            <div class="weather-forecast-item">
+                                <div class="day">Friday</div>
+                                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon"
+                                    class="w-icon">
+                                <div class="temp">25.7&#176;</div>
+                                <div class="descrip">rain</div>
+                            </div>
+                            <div class="weather-forecast-item">
+                                <div class="day">Saturday</div>
+                                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon"
+                                    class="w-icon">
+                                <div class="temp">25.7&#176;</div>
+                                <div class="descrip">rain</div>
+                            </div>
+                            <div class="weather-forecast-item">
+                                <div class="day">Sunday</div>
+                                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon"
+                                    class="w-icon">
+                                <div class="temp">25.7&#176;</div>
+                                <div class="descrip">rain</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </main>
         </div>
     </div>

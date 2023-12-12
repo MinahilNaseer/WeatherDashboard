@@ -1,7 +1,98 @@
-.card{
-    background-color: grey;
+.title-2{
+    top: 20px;
+    position: absolute;
+    
 }
-.card-lg{
-    border-radius: 28px;
-    padding: 20px;
+.forecast{
+    position: absolute;
+    top: 90px;
+    left: 30px;
+    width: 300px;
+    height: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+}
+.forecast .today{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    flex-direction: row;
+}
+forecast .today .other{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.forecast .today .day{
+    padding: 5px 15px;
+    background: #eee;
+    border-radius: 50px;
+    text-align: center;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+.forecast .today .descrip{
+    font-size: 25px;
+    padding-left: 15px;
+
+}
+.forecast .today img{
+    width: 130px;
+}
+.forecast .today .temp{
+    font-size: 40px;
+    display: inline;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    /*padding: 15px;*/
+}
+.forecast .today span{
+    font-size: 40px;
+    margin-right: 5px;
+    margin-top: 20px;
+}
+
+.future-forecast{
+    padding: 30px;
+    position: absolute;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    display: flex;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    width: 1000px;
+    height: 250px;
+    overflow: hidden;
+    margin-top: 200px;
+    float: bottom;
+    left: 30px;
+}
+
+.future-forecast .weather-forecast{
+    display: flex;
+}
+.weather-forecast .weather-forecast-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    border-radius: 1px solid #000;
+    padding: 15px;
+    border-radius: 10px;
+}
+.weather-forecast .weather-forecast-item .day{
+    padding: 5px 15px;
+    background: #eee;
+    border-radius: 50px;
+    text-align: center;
+}
+.weather-forecast .weather-forecast-item .temp{
+    font-weight:bold;
+    font-size: medium;
+}
+.weather-forecast .weather-forecast-item .descrip{
+    margin-top: 10px;
+    font-size: medium;
 }
