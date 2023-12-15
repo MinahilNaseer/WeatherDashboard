@@ -163,7 +163,6 @@ nav:hover{
     gap: 10px;
 }
 .container .right .top .searchBox .inputBox i{
-    color:darkblue;
     cursor: pointer;
 }
 .container .right .top .searchBox .inputBox input{
@@ -569,7 +568,7 @@ form .input-field input{
     margin-top: 18px;
     font-size: 0.95rem;
 }
-form button{
+.form-content .form button{
     width: 100%;
     outline: none;
     border: none;
