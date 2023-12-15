@@ -1,0 +1,197 @@
+.title-2{
+    top: 20px;
+    position: absolute;
+    
+}
+.forecast{
+    position: absolute;
+    top: 90px;
+    left: 30px;
+    width: 300px;
+    height: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+}
+.forecast .today{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    flex-direction: row;
+}
+.forecast .today .day{
+    padding: 5px 15px;
+    background: #eee;
+    border-radius: 50px;
+    text-align: center;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+.forecast .today .descrip{
+    font-size: 25px;
+    padding-left: 15px;
+
+}
+.forecast .today img{
+    width: 130px;
+}
+.forecast .today .temp{
+    font-size: 40px;
+    display: inline;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    /*padding: 15px;*/
+}
+.forecast .today span{
+    font-size: 40px;
+    margin-right: 5px;
+    margin-top: 20px;
+}
+.Highlights{
+    position: absolute;
+    top: 90px;
+    right: 30px;
+    width: 700px;
+    height: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    display: flex;
+}
+.title-3{
+    top: 20px;
+    left: 20px;
+    position: absolute;
+    font-size:medium;
+}
+.sun{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    /*margin: 10px 5px;*/
+    border: 2px solid #eee;
+    padding: 15px;
+    border-radius: 10px;
+    width: 160px;
+    height: 135px;
+}
+.sunrise{
+    position: relative;
+    display: flex;
+    align-items:center;
+    justify-self: center;
+    flex-direction: row;
+    top: 10px;
+}
+.sunset{
+    position: relative;
+    display: flex;
+    align-items:center;
+    justify-self: center;
+    flex-direction: row;
+    top: 20px;
+}
+.sun span{
+    font-size: 30px;
+    color: darkblue;
+}
+
+.others{
+    margin-left: 20px;
+    justify-content: space-between;
+    gap:20px;
+}
+.sunrise-time{
+    margin-top: 4px;
+}
+.title-4{
+    position: absolute;
+    font-size:medium;
+    top: 20px;
+}
+.humidity,.Pressure,.Visibility {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 10px; /* Adjust margin for spacing */
+    border: 2px solid #eee;
+    padding: 10px;
+    border-radius: 10px;
+    width: 150px;
+}
+.detail{
+    position: relative;
+    display: flex;
+    align-items:center;
+    flex-direction: row;
+    top: 10px;
+}
+.detail span{
+    font-size: 40px;
+    color: darkblue;
+}
+.percentage{
+    font-weight:200;
+    font-size:x-large;
+    margin-left: 25px;
+}
+.hPa{
+    margin-left: 15px;
+    font-weight:200;
+    font-size:large;
+}
+.km{
+    margin-left: 20px;
+    font-weight:200;
+    font-size: large;
+}
+.future-forecast{
+    padding: 30px;
+    position: absolute;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    display: flex;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    width: 1050px;
+    height: 250px;
+    overflow: hidden;
+    margin-top: 250px;
+    float: bottom;
+    left: 30px;
+}
+
+.future-forecast .weather-forecast{
+    display:flex;
+    justify-content: space-between;
+}
+.weather-forecast .weather-forecast-item{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    border: 2px solid darkblue;
+    padding: 15px;
+    border-radius: 10px;
+    
+}
+.weather-forecast .weather-forecast-item .day{
+    padding: 5px 15px;
+    background: #eee;
+    border-radius: 50px;
+    text-align: center;
+}
+.weather-forecast .weather-forecast-item .temp{
+    font-weight:bold;
+    font-size: medium;
+}
+.weather-forecast .weather-forecast-item .descrip{
+    margin-top: 10px;
+    font-size: medium;
+}
