@@ -1,15 +1,28 @@
 const express = require('express');
 const https = require('https');
 const path = require('path');
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
 const { response } = require('express');
 const bodyParser = require('body-parser');
 
 const app = express();
+dotenv.config();
+
+const port = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.get('/',(req,res)=>{
   res.sendFile(path.join(__dirname+"/public/main.html"));
+})
+
+app.post('/register',(req,res)=>{
+  try{
+    const{email,password}=req.body;
+  }catch{
+    
+  }
 })
 app.post('/',(req,res)=>{
   const { cityName, lat, lon } = req.body;
@@ -101,4 +114,4 @@ app.post('/',(req,res)=>{
   }
 })
 
-app.listen(3000,()=> console.log("our server is running"))
+app.listen(port,()=> console.log("our server is running"))
