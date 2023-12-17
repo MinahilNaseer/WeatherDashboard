@@ -45,9 +45,9 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="forecast.html">
                                 <i class="fas fa-regular fa-calendar-days"></i>
-                                <span class="nav-item">Calender</span>
+                                <span class="nav-item">Forecast</span>
                             </a>
                         </li>
                         <li>
@@ -76,10 +76,11 @@
                             <input type="text" name="cityName" id="CityInput" placeholder="Search..">
                             <button type="submit" id="searchIcon"><i class="fas fa-search"></i></button>
                         </div>
-
-                        <!--<i class="fas fa-close"></i>-->
                     </div>
                 </form>
+                <div class="login">
+                    <button class="login-btn">LOGIN</button>
+                </div>
             </div>
             <main>
                 <div class="projectCard">
@@ -167,6 +168,73 @@
 
         </div>
 
+    </div>
+    <div class="blur-bg-overlay"></div>
+    <div class="form-popup">
+        <span class="close-btn material-symbols-outlined">close</span>
+        <div class="form-box login">
+            <div class="form-details">
+                <h2>Welcome Back</h2>
+                <p>Please login to your account</p>
+            </div>
+            <div class="form-content">
+                <h3>LOGIN</h3>
+                <form action="#" class="form">
+                    <div class="input-field">
+                        <input type="text" placeholder="Email" required>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" placeholder="Password" required>
+                    </div>
+                    <a href="#" class="forgot-pass">Forgot Password?</a>
+                    <button type="submit">Log In</button>
+                </form>
+                <div class="bottom-link">
+                    Don't have an account?
+                    <a href="#" id="signup-link">Signup</a>
+                </div>
+            </div>
+        </div>
+        <div class="form-box signup">
+            <div class="form-details">
+                <h2>Create Account</h2>
+                <p>To keep yourself updated, please signup using your personal information</p>
+            </div>
+            <div class="form-content">
+                <h3>SIGNUP</h3>
+                <form action="#" class="form">
+                    <div class="input-field">
+                        <input type="text" placeholder="Email" required>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" placeholder="Password" required>
+                    </div>
+                    
+                    <button type="submit">Sign Up</button>
+                </form>
+                <div class="bottom-link">
+                    Already have an account?
+                    <a href="#" id="login-link">Login</a>
+                </div>
+            </div>
+        </div>
+        <div class="date-container">
+            <h2>
+                <div class="day"></div>
+                <div class="current-location">
+                    <button id="getLocationBtn">Get Current</button>
+                </div>
+            </h2>
+            <h5>
+                <p class="date" id="date"></p>
+            </h5>
+            <div class="location-adjust">
+                <span class="material-symbols-outlined">
+                    location_on
+                </span>
+                <span class="location" id="name">Sudney, AUS</span>
+            </div>
+        </div>
     </div>
 
 </body>
