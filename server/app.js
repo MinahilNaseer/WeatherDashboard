@@ -1,29 +1,51 @@
 const express = require('express');
 const https = require('https');
 const path = require('path');
-const mongoose = require("mongoose");
-const dotenv = require("dotenv");
+
 const { response } = require('express');
 const bodyParser = require('body-parser');
+const bcrypt = require("bcrypt");
+
+const Registration = require("./config");
 
 const app = express();
-dotenv.config();
+app.set('view engine','ejs');
 
 const port = process.env.PORT || 3000;
+
 app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.json());
+app.use(express.json());
+app.use(express.urlencoded({extended:false}));
 
 app.use(express.static(path.join(__dirname, 'public')));
+/*app.get('/',(req,res)=>{
+  res.sendFile(path.join(__dirname+"/public/main"));
+})*/
 app.get('/',(req,res)=>{
-  res.sendFile(path.join(__dirname+"/public/main.html"));
+  res.render("main");
 })
-
-app.post('/register',(req,res)=>{
-  try{
+app.post('/register', async (req,res)=>{
+  /*try{
     const{email,password}=req.body;
-  }catch{
-    
+    const registrationData = new Registration({
+      email,
+      password
+    });
+    await registrationData.save();
+    res.json({ success: true, message: 'User successfully registered!' });
+  }catch(error){
+    console.log(error);
+    res.status(500).json({ success: false, message: 'Registration failed. Please try again.' });
+  }*/
+  const data = {
+    email: req.body.email,
+    password: req.body.password
   }
-})
+  const userdata = await Registration.insertMany(data);
+  console.log(userdata);
+
+});
 app.post('/',(req,res)=>{
   const { cityName, lat, lon } = req.body;
   let query;

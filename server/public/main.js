@@ -72,4 +72,3 @@ loginSignupLink.forEach(link => {
     })
 })
 
-    
