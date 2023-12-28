@@ -6,7 +6,7 @@ dotenv.config();
 const username = process.env.MONGODB_USERNAME;
 const password = process.env.MONGODB_PASSWORD;
 
-const connect = mongoose.connect(`mongodb+srv://${username}:${password}@cluster0.njutjcm.mongodb.net/registrationForm`);
+const connect = mongoose.connect(`mongodb+srv://${username}:${password}@cluster0.aiv9lxi.mongodb.net/?retryWrites=true&w=majority`);
 
 connect.then(()=>{
     console.log('MongoDB Connected');

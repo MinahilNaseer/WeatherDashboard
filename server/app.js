@@ -24,25 +24,12 @@ app.get('/', (req, res) => {
 });
 
 app.post('/register',async(re,res)=>{
-    try
-    {
-        const {username,password}=req.body;
-        const existing=await Registration.findOne({username:username});
-        if(!existing)
-        {
-            const registrationData=new Registration({
-                username,
-                password
-            });
-            const userdata = await Registration.insertMany(data);
-             console.log(userdata);
-           // await registrationData.save();
-        }
-    }
-    catch(error){
-    console.log(error);
-    res.status(500).json({ success: false, message: 'Registration failed. Please try again.' });
-    }
+    const data = {
+        email: req.body.email,
+        password: req.body.password
+      }
+      const userdata = await Registration.insertMany(data);
+  console.log(userdata);
 })
 app.post('/', (req, res) => {
     try {
