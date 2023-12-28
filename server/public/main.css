@@ -595,3 +595,34 @@ form button:hover{
 .form-popup.show-signup .signup{
     display: flex;
 }
+.weather-background .date-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.date-container .day{
+    margin: 0;
+    width: 300px;
+}
+.date-container .current-location {
+    position: relative;
+    float: right;
+    display: flex;
+    
+}
+.date-container button{
+    float: right;
+    background: none;
+    border-radius: 5px;
+}
+.date-container .date{
+    display: flex;
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: medium;
+}
