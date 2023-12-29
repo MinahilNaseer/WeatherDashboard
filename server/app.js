@@ -23,13 +23,14 @@ app.get('/', (req, res) => {
     res.render("main");
 });
 
-app.post('/register',async(re,res)=>{
+app.post('/register',async(req,res)=>{
     const data = {
         email: req.body.email,
         password: req.body.password
       }
       const userdata = await Registration.insertMany(data);
-  console.log(userdata);
+      console.log(userdata);
+    
 })
 app.post('/', (req, res) => {
     try {
