@@ -76,19 +76,19 @@ app.post('/',(req,res)=>{
 
       const temp = Math.round(weatherData.main.temp);
       const name = weatherData.name;
-      const desc =weatherData.weather[0].description;      const pressure=weatherData.main.pressure;
+      const desc =weatherData.weather[0].description;      
+      const pressure=weatherData.main.pressure;
       const humidity=weatherData.main.humidity;
       const windspeed= weatherData.wind.speed;
-      const sunrise = weatherData.sys && weatherData.sys.sunrise !== undefined ? formatTime(weatherData.sys.sunrise) : 'N/A';
+      const feels_like=weatherData.main.feels_like;
        res.json({
         temp,
         desc,
         name,
-        visibility,
         pressure,
         humidity,
         windspeed,
-        sunrise,
+        feels_like
         });
    
     });

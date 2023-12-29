@@ -22,7 +22,6 @@ $(document).ready(function(){
         const cityName = $('#CityInput').val();
 
         $.post('/',{cityName},function(data){
-            console.log('Wind Direction:', data.sunrise);
             console.log(data);
            $('#weather-temp').text(data.temp+'C');
            $('#weather-desc').text(data.desc);
@@ -30,7 +29,7 @@ $(document).ready(function(){
             $('#windspeed').text(data.windspeed+'Km/h');  
             $('#humidity').text(data.humidity+'%');
             $('#pressure').text(data.pressure+'bpa');
-            $('#windDirection').text(data.windDirection);
+            $('#feels_like').text(data.feels_like+'C');
         });
     });
 });
