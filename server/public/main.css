@@ -362,16 +362,13 @@ nav:hover{
     top: 0;
     font-size: medium;
 }
-.details .heading-detail{
-    margin: 5px;
-    font-weight: 100;
-    font-size: small;
-    
-}
-.details .heading-per{
+.details .heading-val{
     margin: 20px;
-    font-weight: bold;
-    display: inline-block;
+    font-weight:400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 70px;
 } 
 .details .material-symbols-outlined{
     margin-left: auto;
