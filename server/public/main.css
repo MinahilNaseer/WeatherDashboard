@@ -119,34 +119,7 @@ nav:hover{
     width: 100%;
     padding-left: 0;
 }
-.top .searchbar{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #87CEEB;
-    padding: 15px;
-    border-bottom: 3px solid #fff;
-    width: 100%;
-}
-.top .searchbar .search{
-    width: 80%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 10px;
-    border-radius: 15px;
-    border: 1px solid #d7dbe6;
-}
-.top .searchbar .search i{
-    margin-right: 10px;
-}
-.top .searchbar .search input{
-    flex: 1;
-    border: none;
-    outline: none;
-    font-size: 14px;
-    border-radius: 10px;
-}
+
 .container .right{
     position: relative;
     width: 100%;
@@ -161,7 +134,7 @@ nav:hover{
     width: 100%;
     height: 70px;
     display: flex;
-    justify-content: space-between;
+    gap: 20px;
     align-items: center;
     background: #fff;
     border-radius: 20px;
@@ -171,17 +144,12 @@ nav:hover{
 }
 .container .right .top .searchBox{
     position: relative;
-    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
     width: 100%;
+    float: left;
 }
-.container .right .top .searchBox h1{
-    color: #000;
-    font-size: 1.4em;
-    cursor: pointer;
-}
+
 .container .right .top .searchBox .inputBox{
     position: relative;
     width: 100%;
@@ -195,7 +163,6 @@ nav:hover{
     gap: 10px;
 }
 .container .right .top .searchBox .inputBox i{
-    color:darkblue;
     cursor: pointer;
 }
 .container .right .top .searchBox .inputBox input{
@@ -210,6 +177,19 @@ nav:hover{
 .inputBox button{
     background-color:transparent;
     border: none;
+}
+.top .login{
+    margin-left: auto;
+    margin-right: 20px;
+}
+.login .login-btn{
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 3px;
+    cursor: pointer;
 }
 .container .right main{
     position: relative;
@@ -240,6 +220,8 @@ nav:hover{
     height: 500px;
     text-align: left;
     transform: translate(-50%,0%);
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
 }
 .container .weather-side{
     position: relative;
@@ -269,38 +251,55 @@ nav:hover{
     position: absolute;
     top: 50%;
     left: 50%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.date-container .date-name{
+.date-container .day{
     margin: 0;
+    width: 300px;
 }
-.date-container .date-day{
-    display: block;
+.date-container .current-location {
+    position: relative;
+    float: right;
+    display: flex;
+    
+}
+.date-container button{
+    float: right;
+    background: none;
+    border-radius: 5px;
+}
+.date-container .date{
+    display: flex;
     margin-top: 20px;
     font-weight: 500;
     font-size: medium;
 }
-.date-container .location{
-    display: inline-block;
+
+.location-adjust{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 150px;
-    transform: translate(100%,-90%);
-    text-align: center;
-    font-size: 25px;
-    font-weight: bold;
+    white-space: nowrap;
+    gap: 20px;
 }
-.date-container span{
-    transform: translate(500%,-60%);
-    display: inline-block;
-    height: 0.7em;
-    width: auto;
-    margin-right: 5px;
-    margin-top: 20px;
-    color: #000;
-    font-size: 30px;
+.location-adjust .location{
+    font-size: 20px;
+    font-weight: bold;
 }
 .weather-container{
     position: absolute;
     bottom: 25px;
     left: 25px;
+}
+.weather-container img{
+    
+    height: 50px;
+    width: 50px;
 }
 .weather-container span{
     height: 80px;
@@ -316,11 +315,11 @@ nav:hover{
 .weather-container .weather-desc{
     display: inline-block;
     margin: 0;
+    font-size: 20px;
 }
 .container-rightcolumn{
     display: flex;
     flex-direction: column;
-    /*background-color: antiquewhite;*/
     color: #000;
     float: right;
     width: 500px;
@@ -330,6 +329,7 @@ nav:hover{
     top: 7%;
     right: 0;
 }
+
 :root {
     --container-width: 400px;
     --container-height: 520px;
@@ -344,61 +344,42 @@ nav:hover{
     text-align: left;
     margin-left: 40px;
     opacity: 0.7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
 }
 .container-rainchance .details,.container-windspeed .details, .container-pressure .details,.container-uvindex .details{
-    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
     top: 10%;
     left: 5%;
     height: 70px;
-    width: 250px;
+    width: 350px;
 }
 .details .heading{
     margin: 5px;
+    top: 0;
     font-size: medium;
 }
 .details .heading-detail{
     margin: 5px;
-    display: block;
     font-weight: 100;
     font-size: small;
+    
 }
 .details .heading-per{
     margin: 20px;
     font-weight: bold;
     display: inline-block;
+} 
+.details .material-symbols-outlined{
+    margin-left: auto;
+    /* Add this style to increase the font size of the span */
+    font-size: 35px;
+    color: darkblue;
 }
-.container-rainchance .wrap,.container-windspeed .wrap{
-    width: 300px;
-    margin: 0 auto;
-    background-color: #87CEEB;
-  }
-  .wrap .progress-radial, .wrap .compass{
-    float: right;
-    margin-top: 3px;
-    margin-right: 30px;
-    position: relative;
-    width: 100px;
-    height: 93px;
-    background-color: #d7dbe6;
-    border-radius: 50%;
-  }
-  .progress-radial .overlay{
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    background-color:#d7dbe6;
-    border-radius: 50%;
-    margin-top: 7px;
-    margin-left: 10px;
-    text-align: center;
-    line-height: 80px;
-    font-size: 18px;
-  }
-.progress-50 {
-    background-image: 
-        linear-gradient(90deg, lightblue 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)),
-        linear-gradient(180deg, darkblue 50%, darkblue 50%, darkblue);
-}
+
 .container-rightcolumn > :not(:first-child) {
     margin-top: 35px;
     position: relative; /* Adjust the margin-top value as needed */
@@ -413,51 +394,152 @@ nav:hover{
     text-align: left;
     margin-left: 40px;
     opacity: 0.7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
 }
-.compass {
-    border: 2px solid #000080;
-}
-.needle {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    width: 2px;
-    height: 50%;
-    background-color: darkblue;
-    transform-origin: 50% 100%;
-    transform: translate(-50%, -100%) rotate(45deg);
-    transition: transform 0.5s ease;
-}
-
-.compass:hover .needle {
-    transform: translate(-50%, -100%) rotate(405deg);
-}
-.direction {
-    position: absolute;
-    font-size: 12px;
-    font-weight: bold;
-}
-
-.north {
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.south {
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.east {
-    top: 50%;
-    left: calc(100% - 20px);
-    transform: translateY(-50%);
-}
-
 .west {
     top: 50%;
     left: 10px;
     transform: translateY(-50%);
+}
+.blur-bg-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    backdrop-filter: blur(3px);
+    transition: 0.1s ease;
+}
+.show-popup .blur-bg-overlay{
+    opacity: 1;
+    pointer-events: auto;
+}
+.form-popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    max-width: 720px;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    background: #fff;
+    border: 2px solid #000;
+    transform: translate(-50%,-50%);
+}
+.show-popup .form-popup{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%,-50%);
+    transition: transfrom 0.3s ease, opacity 0.1s;
+}
+.form-popup .close-btn{
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    color: #878484;
+    cursor: pointer;
+}
+.form-popup .form-box{
+    display: flex;
+}
+.form-box .form-details{
+    max-width: 330px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+.login .form-details{
+    background: url("images/snow.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+.signup .form-details{
+    background: url("images/rain.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+.form-details p{
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.form-box h2{
+    text-align: center;
+    margin-bottom: 30px;
+    
+}
+.form-box .form-content{
+    width: 100%;
+    padding: 35px;
+}
+.form-content h3{
+    text-align: center;
+}
+form .input-field{
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+}
+form .input-field input{
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    border:1px solid #000;
+    outline: none;
+    border-width: 2px;
+    border-radius: 3px;
+    padding: 0 15px;
+}
+.input-field input:focus{
+    border-color: darkblue;
+}
+.form-box a{
+    color: darkblue;
+    text-decoration: none;
+    text-align: center;
+}
+.form-box a:hover{
+    text-decoration: underline;
+}
+
+.form-box .forgot-pass{
+    display: inline-flex;
+    margin-top: 18px;
+    font-size: 0.95rem;
+}
+.form-content .form button{
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 14px 0;
+    border-radius: 3px;
+    margin: 25px 0;
+    color: #fff;
+    background: #00bcd4;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+form button:hover{
+    background: #0097a7;
+}
+.form-box .bottom-link{
+    text-align: center;
+}
+.form-popup .signup,
+.form-popup.show-signup .login{
+    display: none;
+}
+.form-popup.show-signup .signup{
+    display: flex;
 }
