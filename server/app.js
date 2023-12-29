@@ -12,6 +12,46 @@ app.get('/',(req,res)=>{
   res.sendFile(path.join(__dirname+"/public/main.html"));
 })
 app.post('/',(req,res)=>{
+
+  //console.log(req.body.cityName);
+  const query = req.body.cityName
+  const apiKey = '9a45dc5470304ed7d813a404d98c2758'
+  const url = 'https://api.openweathermap.org/data/2.5/weather?q='+query+'&appid='+apiKey+'&units=metric'
+  https.get(url,(response)=>{
+    let data= '';
+    response.on('data',(chunk)=>{
+      //console.log(data);
+      
+      //const weatherData = JSON.parse(data);
+      //console.log(weatherData);
+      //const temp = weatherData.main.temp;
+      //console.log(temp);
+      data +=chunk;
+    })
+    response.on('end',()=>{
+      const weatherData = JSON.parse(data);
+      console.log('Wind Direction:', weatherData.main.temp);
+      console.log(weatherData);
+
+      const temp = Math.round(weatherData.main.temp);
+      const name = weatherData.name;
+      const desc =weatherData.weather[0].description;      
+      const pressure=weatherData.main.pressure;
+      const humidity=weatherData.main.humidity;
+      const windspeed= weatherData.wind.speed;
+      const feels_like=weatherData.main.feels_like;
+       res.json({
+        temp,
+        desc,
+        name,
+        pressure,
+        humidity,
+        windspeed,
+        feels_like
+        });
+   
+    });
+
   const { cityName, lat, lon } = req.body;
   let query;
 
@@ -94,6 +134,7 @@ app.post('/',(req,res)=>{
               res.status(500).json({ error: 'Internal Server Error' });
           }
       });
+
   });
   } else {
       res.status(400).json({ error: 'City name or geolocation is required.' });

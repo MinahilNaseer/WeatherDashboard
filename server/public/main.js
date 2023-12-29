@@ -12,14 +12,25 @@ const current  = `${year}-${month < 10 ? '0' : ''}${month}-${date < 10 ? '0' : '
 document.getElementById('date').textContent = current;
 console.log(current);
 
+
+
+// for city and temprature
 $(document).ready(function(){
     function getWeather(cityName){
         $.post('/',{cityName},function(data){
             console.log(data);
+
+           $('#weather-temp').text(data.temp+'C');
+           $('#weather-desc').text(data.desc);
+
             $('#weather-temp').text(data.temp+'°C');
             $('#weather-desc').text(data.desc);
+
             $('#name').text(data.name);
-            
+            $('#windspeed').text(data.windspeed+'Km/h');  
+            $('#humidity').text(data.humidity+'%');
+            $('#pressure').text(data.pressure+'bpa');
+            $('#feels_like').text(data.feels_like+'C');
         });
     }
     function getWeatherByLocation() {
@@ -55,6 +66,7 @@ $(document).ready(function(){
 
 });
 
+
 const showPopupBtn = document.querySelector(".login-btn");
 const hidePopupBtn = document.querySelector(".form-popup .close-btn");
 const loginSignupLink = document.querySelectorAll(".form-box .bottom-link a");
@@ -71,5 +83,6 @@ loginSignupLink.forEach(link => {
         formPopup.classList[link.id === "signup-link" ? 'add' : 'remove']("show-signup")
     })
 })
+
 
     
