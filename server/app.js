@@ -44,7 +44,28 @@ app.post('/register',async(req,res)=>{
       }
 })
 
+app.post('/login',async(req,res)=>{
+try
+{
+  const check=await Registration.findOne({email: req.body.email});
+  if(!check)
+  {
+    res.send("Email is not registered");
+  }
+  const PasswordMatch= bcrypt.compare(req.body.password,check.password);
+  if(!PasswordMatch)
+  {
+    res.send("Logged in");
+  }
+  else{
+    req.send("Wrong password");
+  }
+}
+catch
+{
 
+}
+})
 app.post('/', (req, res) => {
     try {
         const { cityName, lat, lon } = req.body;
