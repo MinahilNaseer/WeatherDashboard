@@ -28,10 +28,23 @@ app.post('/register',async(req,res)=>{
         email: req.body.email,
         password: req.body.password
       }
+      //check if user already exists 
+      const existingUser=await Registration.findOne({email: data.email});
+      if(existingUser)
+      {
+        res.send("User already exists.try another email");
+      }
+      else{
+        //hash password using bycrypt
+        const saltRounds=10;
+        const hashedPaswword=await bcrypt.hash(data.password,saltRounds);
+        data.password=hashedPaswword;
       const userdata = await Registration.insertMany(data);
       console.log(userdata);
-    
+      }
 })
+
+
 app.post('/', (req, res) => {
     try {
         const { cityName, lat, lon } = req.body;
