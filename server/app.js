@@ -66,6 +66,7 @@ catch
 
 }
 })
+
 app.post('/', (req, res) => {
     try {
         const { cityName, lat, lon } = req.body;

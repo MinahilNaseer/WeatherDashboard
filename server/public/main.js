@@ -32,6 +32,7 @@ $(document).ready(function(){
 
     });
 });
+
 function getWeatherByLocation() {
     if ('geolocation' in navigator) {
         navigator.geolocation.getCurrentPosition(function(position) {
@@ -81,6 +82,18 @@ loginSignupLink.forEach(link =>
         formPopup.classList[link.id === "signup-link" ? 'add' : 'remove']("show-signup")
     })
 })
+$(document).ready(function () {
+    $('.login-btn').click(function (e) {
+        e.preventDefault();
+        const email = $('#email').val(); // Assuming you have an input field with id 'email'
+        const password = $('#password').val(); // Assuming you have an input field with id 'password'
+
+        // Assuming you are making an AJAX request to your /login endpoint
+        $.post('/login', { email: email, password: password }, function (data) {
+            $('.name-loggedin').text(data.email);
+        });
+    });
+});
 
 
     
