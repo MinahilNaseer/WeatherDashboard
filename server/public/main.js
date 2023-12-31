@@ -82,15 +82,24 @@ loginSignupLink.forEach(link =>
         formPopup.classList[link.id === "signup-link" ? 'add' : 'remove']("show-signup")
     })
 })
-$(document).ready(function () {
-    $('.login-btn').click(function (e) {
-        e.preventDefault();
-        const email = $('#email').val(); // Assuming you have an input field with id 'email'
-        const password = $('#password').val(); // Assuming you have an input field with id 'password'
 
-        // Assuming you are making an AJAX request to your /login endpoint
+$(document).ready(function () {
+    $('.submitlog').click(function (e) {
+        e.preventDefault();
+        console.log("Button clicked!");
+
+        const email = $('#email').val();
+        const password = $('#password').val();
+
         $.post('/login', { email: email, password: password }, function (data) {
-            $('.name-loggedin').text(data.email);
+            console.log(data);
+            if (data.success) {
+                console.log("Login successful!");
+                $('#user-name').text(data.email);
+                $('.login').hide();
+            } else {
+                alert(data);
+            }
         });
     });
 });
