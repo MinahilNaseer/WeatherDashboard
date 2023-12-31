@@ -296,10 +296,10 @@ nav:hover{
     bottom: 25px;
     left: 25px;
 }
-.weather-container img{
+.weather-container .icon{
     
-    height: 50px;
-    width: 50px;
+    min-height: 60px;
+    min-width: 60px;
 }
 .weather-container span{
     height: 80px;

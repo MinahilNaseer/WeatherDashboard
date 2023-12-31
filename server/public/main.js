@@ -19,13 +19,12 @@ $(document).ready(function(){
     function getWeather(cityName){
         $.post('/',{cityName},function(data){
             console.log(data);
-
-           $('#weather-temp').text(data.temp+'C');
+            console.log(data.icon);
+            var iconurl = "https://openweathermap.org/img/wn/"+ data.icon +"@2x.png";
+            console.log(iconurl);
            $('#weather-desc').text(data.desc);
-
             $('#weather-temp').text(data.temp+'°C');
-            $('#weather-desc').text(data.desc);
-
+            $('#weather-icon').attr('src',iconurl);
             $('#name').text(data.name);
             $('#windspeed').text(data.windspeed+'Km/h');  
             $('#humidity').text(data.humidity+'%');
@@ -43,9 +42,15 @@ $(document).ready(function(){
                 console.log('Longitude:', roundedLongitude);
                 $.post('/', { lat: latitude, lon: longitude }, function(data) {
                     console.log(data);
+                    var iconurl = "https://openweathermap.org/img/wn/"+ data.icon +"@2x.png";
                     $('#weather-temp').text(data.temp + '°C');
                     $('#weather-desc').text(data.desc);
                     $('#name').text(data.name);
+                    $('#weather-icon').attr('src',iconurl);
+                    $('#windspeed').text(data.windspeed+'Km/h');  
+                    $('#humidity').text(data.humidity+'%');
+                    $('#pressure').text(data.pressure+'bpa');
+                    $('#feels_like').text(data.feels_like+'C');
                 });
             }, function(error) {
                 console.error('Error getting geolocation:', error);

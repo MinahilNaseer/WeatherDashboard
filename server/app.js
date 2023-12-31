@@ -37,7 +37,7 @@
                 const humidity=weatherData.main.humidity;
                 const windspeed= weatherData.wind.speed;
                 const feels_like=weatherData.main.feels_like;
-                const icon = weatherData.weather[0].icon;
+                var icon = weatherData.weather[0].icon;
                 res.json({
                     temp,
                     desc,
