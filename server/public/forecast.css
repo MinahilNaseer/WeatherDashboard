@@ -168,6 +168,13 @@
 .future-forecast .weather-forecast{
     display:flex;
     justify-content: space-between;
+    overflow-y: auto;
+}
+.weather-forecast::-webkit-scrollbar-thumb{
+    background-color: transparent;
+}
+.weather-forecast::-webkit-scrollbar-track {
+    background-color: transparent; /* Set the track color to transparent */
 }
 .weather-forecast .weather-forecast-item{
     display: flex;
