@@ -220,6 +220,8 @@ nav:hover{
     height: 500px;
     text-align: left;
     transform: translate(-50%,0%);
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
 }
 .container .weather-side{
     position: relative;
@@ -294,10 +296,15 @@ nav:hover{
     bottom: 25px;
     left: 25px;
 }
+.weather-container img{
+    
+    height: 50px;
+    width: 50px;
+}
 .weather-container span{
     height: 80px;
     width: 100px;
-    color: rgb(238,215,5);
+    color: rgb(230, 250, 115);
     font-size: 70px;
 }
 .weather-container .weather-temp{
@@ -322,6 +329,7 @@ nav:hover{
     top: 7%;
     right: 0;
 }
+
 :root {
     --container-width: 400px;
     --container-height: 520px;
@@ -336,61 +344,39 @@ nav:hover{
     text-align: left;
     margin-left: 40px;
     opacity: 0.7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
 }
 .container-rainchance .details,.container-windspeed .details, .container-pressure .details,.container-uvindex .details{
-    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
     top: 10%;
     left: 5%;
     height: 70px;
-    width: 250px;
+    width: 350px;
 }
 .details .heading{
     margin: 5px;
+    top: 0;
     font-size: medium;
 }
-.details .heading-detail{
-    margin: 5px;
-    display: block;
-    font-weight: 100;
-    font-size: small;
-}
-.details .heading-per{
+.details .heading-val{
     margin: 20px;
-    font-weight: bold;
-    display: inline-block;
+    font-weight:400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 70px;
+} 
+.details .material-symbols-outlined{
+    margin-left: auto;
+    /* Add this style to increase the font size of the span */
+    font-size: 35px;
+    color: darkblue;
 }
-.container-rainchance .wrap,.container-windspeed .wrap{
-    width: 300px;
-    margin: 0 auto;
-    background-color: #87CEEB;
-  }
-  .wrap .progress-radial, .wrap .compass{
-    float: right;
-    margin-top: 3px;
-    margin-right: 30px;
-    position: relative;
-    width: 100px;
-    height: 93px;
-    background-color: #d7dbe6;
-    border-radius: 50%;
-  }
-  .progress-radial .overlay{
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    background-color:#d7dbe6;
-    border-radius: 50%;
-    margin-top: 7px;
-    margin-left: 10px;
-    text-align: center;
-    line-height: 80px;
-    font-size: 18px;
-  }
-.progress-50 {
-    background-image: 
-        linear-gradient(90deg, lightblue 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)),
-        linear-gradient(180deg, darkblue 50%, darkblue 50%, darkblue);
-}
+
 .container-rightcolumn > :not(:first-child) {
     margin-top: 35px;
     position: relative; /* Adjust the margin-top value as needed */
@@ -405,49 +391,8 @@ nav:hover{
     text-align: left;
     margin-left: 40px;
     opacity: 0.7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
 }
-.compass {
-    border: 2px solid #000080;
-}
-.needle {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    width: 2px;
-    height: 50%;
-    background-color: darkblue;
-    transform-origin: 50% 100%;
-    transform: translate(-50%, -100%) rotate(45deg);
-    transition: transform 0.5s ease;
-}
-
-.compass:hover .needle {
-    transform: translate(-50%, -100%) rotate(405deg);
-}
-.direction {
-    position: absolute;
-    font-size: 12px;
-    font-weight: bold;
-}
-
-.north {
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.south {
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.east {
-    top: 50%;
-    left: calc(100% - 20px);
-    transform: translateY(-50%);
-}
-
 .west {
     top: 50%;
     left: 10px;
