@@ -64,6 +64,32 @@
     } else if (lat && lon) 
     {
       
+
+      //const weatherData = JSON.parse(data);
+      //console.log(weatherData);
+      //const temp = weatherData.main.temp;
+      //console.log(temp);
+      data +=chunk;
+    })
+    response.on('end',()=>{
+      const weatherData = JSON.parse(data);
+      console.log(weatherData);
+      const temp = Math.round(weatherData.main.temp);
+      const name = weatherData.name;
+      const desc =weatherData.weather[0].description;     
+       const pressure=weatherData.main.pressure;
+      const humidity=weatherData.main.humidity;
+      const windspeed= weatherData.wind.speed;
+     const feels_like=weatherData.main.feels_like;
+       res.json({
+        temp,
+        desc,
+        name,
+        pressure,
+        humidity,
+        windspeed,
+        feels_like
+
       const latitude = lat; // Replace with the actual latitude
       const longitude = lon;
       const lang = 'en';
@@ -111,8 +137,14 @@
                 console.error('Error parsing weather data:', error);
                 res.status(500).json({ error: 'Internal Server Error' });
             }
+
         });
     });
+
+});
+});
+app.listen(3000, () => console.log("Our server is running"));
+
   }
   else 
     {
@@ -122,3 +154,4 @@
   })
 
   app.listen(3000,()=> console.log("our server is running"))
+
