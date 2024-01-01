@@ -76,10 +76,11 @@
                     </div>
                 </form>
                 <div class="name-login">
-                    <h9 class="name-loggedin" id="name-loggedin">
-                        <span id="user-name"></span>
+                    <h9 class="name-loggedin">
+                        <p id = "user-email"></p>
                     </h9>
                 </div>
+                
                 <div class="login">
                     <button class="login-btn">LOGIN</button>
                 </div>
@@ -185,11 +186,15 @@
                         <input type="password" name="password" id="password" placeholder="Password" required>
                     </div>
                     <a href="#" class="forgot-pass">Forgot Password?</a>
-                    <button type="submitlog" id="submitlog">Log In</button>
+                    <button type="submit" onclick="submitLoginForm()">Sign Up</button>
                     </form>
                     <div class="bottom-link">
                         Dont have an account?
                         <a href="#" id="signup-link">Signup</a>
+                    </div>
+                    <div class="message1">
+                        <div class="success1" id="success1">you are logged in</div>
+                        <div class="danger1" id="danger1">Enter correct email and password</div>
                     </div>
             </div>
             </div>
@@ -198,23 +203,27 @@
                     <h2>Create Account</h2>
                     <p> To keep yourself updated, please signup using personal information</p>
                 </div>
-            <div class="form-content">
-                <h3>SIGNUP</h3>
-                <form action="/register" method="post" class="form" onsubmit="return validateForm()">
-                    <div class="input-field">
-                        <input type="text" name="email" id="email" placeholder="Email" required>
+                <div class="form-content">
+                    <h3>SIGNUP</h3>
+                    <form action="/register" method="post" class="form" >
+                        <div class="input-field">
+                            <input type="text" name="email" id="email" placeholder="Email" required>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" name="password" id="password" placeholder="Password" required>
+                        </div>
+    
+                        <button type="submit" onclick="submitForm()">Sign Up</button>
+                    </form>
+                    <div class="bottom-link">
+                        Already have an account?
+                        <a href="#" id="login-link">Login</a>
                     </div>
-                    <div class="input-field">
-                        <input type="password" name="password" id="password" placeholder="Password" required>
+                    <div class="message">
+                        <div class="success" id="success">Ýour Have Signed Up</div>
+                        <div class="danger" id="danger">Enter correct email and password</div>
                     </div>
-
-                    <button type="submit">Sign Up</button>
-                </form>
-                <div class="bottom-link">
-                    Already have an account?
-                    <a href="#" id="login-link">Login</a>
                 </div>
-            </div>
          </div>
         </div>
     </div>

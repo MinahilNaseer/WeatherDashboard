@@ -627,7 +627,7 @@ form button:hover{
     font-size: medium;
 }
 .top .name-login{
-    width: 130px;
+    width: 500px;
     height: 30px;
     margin-left: auto;
     background-color:#d7dbe6;
@@ -640,4 +640,44 @@ form button:hover{
 .top .name-login .name-loggedin{
     font-size: medium;
     text-align: center;
+}
+.message{
+    width: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.message .success{
+    font-size: 20px;
+    color: green;
+    position: absolute;
+    animation: buttons .3s linear;
+    display: none;
+}
+.message .danger{
+    font-size: 20px;
+    color: red;
+    position: absolute;
+    animation: buttons .3s linear;
+    display: none;
+}
+.message1{
+    width: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.message1 .success1{
+    font-size: 20px;
+    color: green;
+    position: absolute;
+    animation: buttons .3s linear;
+    display: none;
+}
+.message1 .danger1{
+    font-size: 20px;
+    color: red;
+    position: absolute;
+    animation: buttons .3s linear;
+    display: none;
 }

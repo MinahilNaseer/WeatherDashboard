@@ -84,7 +84,7 @@ loginSignupLink.forEach(link =>
 })
 
 $(document).ready(function () {
-    $('.submitlog').click(function (e) {
+    $('#submitlog').click(function (e) {
         e.preventDefault();
         console.log("Button clicked!");
 
@@ -103,6 +103,70 @@ $(document).ready(function () {
         });
     });
 });
+function submitForm() {
+    // Get form data
+    const formData = {
+      email: document.getElementById('email').value,
+      password: document.getElementById('password').value
+    };
 
+    // Send form data to server using fetch
+    fetch('/register', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    })
+      .then(response => response.text())
+      .then(data => {
+        console.log(data);
+        if (data.includes("User successfully registered")) {
+          // Show success message
+          document.getElementById('success').style.display = 'block';
+          document.getElementById('danger').style.display = 'none';
+        } else{
+          // Show danger message
+          document.getElementById('success').style.display = 'none';
+          document.getElementById('danger').style.display = 'block';
+        }
+      })
+      .catch(error => console.error('Error:', error));
+  }
 
-    
+  function submitLoginForm() {
+    // Get form data
+    const formData = {
+        email: document.getElementById('email').value,
+        password: document.getElementById('password').value
+    };
+
+    // Send form data to server using fetch
+    fetch('/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+    })
+    .then(response => response.json()) // Assuming server sends JSON response
+    .then(data => {
+        console.log(data);
+        if (data.success) {
+            // Show success message or redirect to the logged-in page
+            document.getElementById('success1').style.display = 'block';
+            document.getElementById('danger1').style.display = 'none';
+
+            // Display the email in the HTML
+            document.getElementById('user-email').innerText = data.email;
+
+            // You can also redirect to another page if login is successful
+            window.location.href = '/dashboard';
+        } else {
+            // Show danger message
+            document.getElementById('success1').style.display = 'none';
+            document.getElementById('danger1').style.display = 'block';
+        }
+    })
+    .catch(error => console.error('Error:', error));
+}

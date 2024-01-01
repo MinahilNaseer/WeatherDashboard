@@ -24,48 +24,57 @@ app.get('/', (req, res) => {
 });
 
 app.post('/register',async(req,res)=>{
-    const data = {
-        email: req.body.email,
-        password: req.body.password
-      }
-      //check if user already exists 
-      const existingUser=await Registration.findOne({email: data.email});
-      if(existingUser)
-      {
-        res.send("User already exists.try another email");
-      }
-      else{
-        //hash password using bycrypt
-        const saltRounds=10;
-        const hashedPaswword=await bcrypt.hash(data.password,saltRounds);
-        data.password=hashedPaswword;
-      const userdata = await Registration.insertMany(data);
-      console.log(userdata);
-      }
-})
-
-app.post('/login',async(req,res)=>{
-try
-{
-  const check=await Registration.findOne({email: req.body.email});
-  if(!check)
-  {
-    res.send("Email is not registered");
-  }
-  const PasswordMatch= bcrypt.compare(req.body.password,check.password);
-  if(!PasswordMatch)
-  {
-    res.send("Logged in");
-  }
-  else{
-    req.send("Wrong password");
-  }
-}
-catch
-{
-
+  const data = {
+      email: req.body.email,
+      password: req.body.password
+    }
+    //check if user already exists 
+    const existingUser = await Registration.findOne({email: data.email});
+    if(existingUser)
+    {
+      console.log("User not registered");
+    }
+    else{
+      //hash password using bycrypt
+      if (!data.password) {
+          return res.status(400).json({ success: false, message: "Password is required" });
+        }
+        try {
+    const userdata = await Registration.insertMany(data);
+   console.log("User sucessfully registered");
+    console.log(userdata);
+    }catch (error) {
+      console.error('Error hashing password:', error);
+      res.status(500).json({ success: false, message: "Internal server error" });
+    }
 }
 })
+
+app.post('/login', async (req, res) => {
+  try {
+    const check = await Registration.findOne({ email: req.body.email });
+
+    if (!check) {
+      res.send("Email is not registered");
+    } else {
+      // Get the entered password from the request body
+      const enteredPassword = req.body.password;
+
+      // Compare the entered password with the stored password
+      if (enteredPassword === check.password) {
+        // Passwords match
+        console.log("Logged in");
+        res.status(201).json({ success: true, email: check.email });
+      } else {
+        // Passwords do not match
+        console.log("Wrong password");
+      }
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Internal Server Error");
+  }
+});
 
 app.post('/', (req, res) => {
     try {
