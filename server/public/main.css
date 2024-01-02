@@ -540,3 +540,89 @@ form button:hover{
 .form-popup.show-signup .signup{
     display: flex;
 }
+.weather-background .date-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.date-container .day{
+    margin: 0;
+    width: 300px;
+}
+.date-container .current-location {
+    position: relative;
+    float: right;
+    display: flex;
+    
+}
+.date-container button{
+    float: right;
+    background: none;
+    border-radius: 5px;
+}
+.date-container .date{
+    display: flex;
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: medium;
+}
+.top .name-login{
+    width: 500px;
+    height: 30px;
+    margin-left: auto;
+    background-color:#d7dbe6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top .name-login .name-loggedin{
+    font-size: medium;
+    text-align: center;
+}
+.message{
+    width: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.message .success{
+    font-size: 20px;
+    color: green;
+    position: absolute;
+    animation: buttons .3s linear;
+    display: none;
+}
+.message .danger{
+    font-size: 20px;
+    color: red;
+    position: absolute;
+    animation: buttons .3s linear;
+    display: none;
+}
+.message1{
+    width: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.message1 .success1{
+    font-size: 20px;
+    color: green;
+    position: absolute;
+    animation: buttons .3s linear;
+    display: none;
+}
+.message1 .danger1{
+    font-size: 20px;
+    color: red;
+    position: absolute;
+    animation: buttons .3s linear;
+    display: none;
+}
