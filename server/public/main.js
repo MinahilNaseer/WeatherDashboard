@@ -109,7 +109,7 @@ $(document).ready(function () {
         });
     });
 });
-function submitForm() {
+async function submitForm() {
     // Get form data
     const formData = {
       email: document.getElementById('email').value,
@@ -124,20 +124,35 @@ function submitForm() {
       },
       body: JSON.stringify(formData),
     })
-      .then(response => response.text())
-      .then(data => {
-        console.log(data);
-        if (data.includes("User successfully registered")) {
-          // Show success message
-          document.getElementById('success').style.display = 'block';
-          document.getElementById('danger').style.display = 'none';
-        } else{
-          // Show danger message
-          document.getElementById('success').style.display = 'none';
-          document.getElementById('danger').style.display = 'block';
-        }
-      })
-      .catch(error => console.error('Error:', error));
+      try{
+     const result = await response.text(); 
+     console.log("Result:", result);
+
+     const resultLowerCase = result.toLowerCase();
+     // Display a toast notification based on the result
+     if (!resultLowerCase.includes("already")) {
+        Toastify({
+           text: result,
+           duration: 3000, // Display the toast for 3 seconds
+           close: true,
+           backgroundColor: "green"
+        }).showToast();
+     } 
+     else 
+     {
+        Toastify({
+           text: result,
+           duration: 3000,
+           close: true,
+           backgroundColor: "red"
+        }).showToast();
+     }
+
+    }
+    catch (error) {
+        console.error("Error in submitForm:", error);
+        // Handle the error or log it for further investigation
+    }
   }
 
   function submitLoginForm() {

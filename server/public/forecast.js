@@ -88,7 +88,7 @@ function showWeatherData(data){
                                 <span class="material-symbols-outlined">
                                     thermostat
                                 </span>
-                                <div class="temp">${day.temp.day}&#176;
+                                <div class="temp">${day.temp.day}&#176C
                                 </div>
                                 <div class="descrip">${day.weather[0].description}</div>
                                 </div>`
@@ -98,7 +98,7 @@ function showWeatherData(data){
                                 <div class="day">${window.moment(day.dt*1000).format('ddd')}</div>
                                 <img src="https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="weather-icon"
                                     class="w-icon">
-                                <div class="temp">${day.temp.day}&#176;</div>
+                                <div class="temp">${day.temp.day}&#176;C</div>
                                 <div class="descrip">${day.weather[0].description}</div>
                             </div>`
             }
