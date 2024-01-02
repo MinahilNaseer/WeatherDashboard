@@ -24,7 +24,7 @@
                     <ul>
                         </li>
                         <li>
-                            <a href="index.html">
+                            <a href="main.html">
                                 <i class="fas fa-border-all"></i>
                                 <span class="nav-item">Dashboard</span>
                             </a>
@@ -109,10 +109,14 @@
                                     </div>
                                 </div>
                                 <div class="weather-container">
+
                                     <img id="weather-icon" src="images/R.png">
                                     <!--<span class="material-symbols-outlined" id="weather-icon">
                                         clear_day
                                     </span>-->
+
+                                    <img class="icon" id="weather-icon" src="">
+
                                     <h3 class="weather-temp" id="weather-temp">33 C</h3>
                                     <h4 class="weather-desc" id="weather-desc">Cloudy Sunny</h4>
                                 </div>
@@ -122,19 +126,33 @@
                     <div class="container-rightcolumn">
                         <div class="container-rainchance">
                             <div class="details">
+
                                 <h6 class="heading">Rain Chance</h6>
                                 <h7 class="heading-detail">Today rain chance</h7>
                                 <h8 class="heading-per">50%</h8>
                                 <span class="material-symbols-outlined">
                                     water_drop
+
+
+                                <h6 class="heading">Humidity</h6>
+                                <h8 class="heading-val"  id="humidity">50%</h8>
+                                <span class="material-symbols-outlined">
+                                    humidity_percentage
+
                                 </span>
                             </div>
+                            
                         </div>
                         <div class="container-windspeed">
                             <div class="details">
                                 <h6 class="heading">Wind Speed</h6>
+
                                 <h7 class="heading-detail">Today wind speed</h7>
                                 <h8 class="heading-per">24km/h</h8>
+
+                                
+                                <h8 class="heading-val" id="windspeed">48KM/H</h8>
+
                                 <span class="material-symbols-outlined">
                                     air
                                 </span>
@@ -143,6 +161,7 @@
                         <div class="container-pressure">
                             <div class="details">
                                 <h6 class="heading">Pressure</h6>
+
                                 <h7 class="heading-detail">Today pressure</h7>
                                 <h8 class="heading-per" id="pressure">270 hpa</h8>
                                 <span class="material-symbols-outlined">
@@ -150,15 +169,31 @@
                                 </span>
                             </div>
                             <div class="wrap">
+
+                                
+                                <h8 class="heading-val" id="pressure">270 hpa</h8>
+                                <span class="material-symbols-outlined">
+                                    airwave
+                                </span>
+
+
                             </div>
                         </div>
                         <div class="container-uvindex">
                             <div class="details">
+
                                 <h6 class="heading">UV Index</h6>
                                 <h7 class="heading-detail">Today UV Index</h7>
                                 <h8 class="heading-per">2</h8>
                             </div>
                             <div class="wrap">
+
+                                <h6 class="heading">Feels like</h6>
+                                <h8 class="heading-val" id="feels_like"> C</h8>
+                                <span class="material-symbols-outlined">
+                                    thermostat
+                                </span>
+
                             </div>
                         </div>
                     </div>
@@ -225,6 +260,23 @@
                     </div>
                 </div>
          </div>
+        </div>
+        <div class="date-container">
+            <h2>
+                <div class="day"></div>
+                <div class="current-location">
+                    <button id="getLocationBtn">Get Current</button>
+                </div>
+            </h2>
+            <h5>
+                <p class="date" id="date"></p>
+            </h5>
+            <div class="location-adjust">
+                <span class="material-symbols-outlined">
+                    location_on
+                </span>
+                <span class="location" id="name">Sudney, AUS</span>
+            </div>
         </div>
     </div>
 </body>
