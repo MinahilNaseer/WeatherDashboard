@@ -15,8 +15,7 @@ The Weather Dashboard is a web application that provides real-time weather infor
 - **Express**: Web framework for Node.js.
 - **MongoDB**: NoSQL database for storing user-related data.
 - **Weather API**: Fetches real-time weather data.
-- **HTML/CSS**: Frontend for the user interface.
-- **JavaScript/jQuery**: Handles dynamic content and AJAX requests on the frontend.
+- **ReactJs**: Frontend for the user interface.
 
 ## Installation
 
